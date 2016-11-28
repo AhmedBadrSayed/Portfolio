@@ -1,15 +1,17 @@
 package com.projects.ahmedbadr.portfolio;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
 import android.widget.Toast;
+
+
+import com.projects.ahmedbadr.portfolio.Activities.Movies;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import retrofit2.Call;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (view.getId()){
             case R.id.popular_movies:
-                Toast.makeText(getApplication(),"This will launch my popular movies project",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,Movies.class));
                 break;
             case R.id.stock_hawk:
                 Toast.makeText(getApplication(),"This will launch my stock hawk project",Toast.LENGTH_SHORT).show();

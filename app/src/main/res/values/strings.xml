@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Portfolio</string>
+
+    <string name="pref_sort_value_mostpopular" translatable="false">popular</string>
+    <string name="pref_sort_value_toprated" translatable="false">top_rated</string>
+    <string name="pref_sort_value_favourits" translatable="false">favorites</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="favorites">Favorites</string>
+    <string name="context_menu">Menue</string>
+    <string name="title_activity_movie_details">MovieDetails</string>
+    <string name="large_text">
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+    </string>
+    <string name="action_settings">Settings</string>
 </resources>
