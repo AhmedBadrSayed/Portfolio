@@ -12,41 +12,41 @@
     tools:context=".MainActivity"
     android:background="@android:color/white">
 
-        <Button
-            style="@style/MenuButtons"
-            android:text="Popular Movies"
-            android:id="@+id/popular_movies"
-            android:layout_marginTop="50dp"
-            />
+    <Button
+        style="@style/MenuButtons"
+        android:text="@string/popular_movies"
+        android:id="@+id/popular_movies"
+        android:layout_marginTop="50dp"
+        />
 
-        <Button
-            style="@style/MenuButtons"
-            android:text="Stock Hawk"
-            android:id="@+id/stock_hawk"
-            android:layout_marginTop="15dp" />
+    <Button
+        style="@style/MenuButtons"
+        android:text="@string/stock_hawk"
+        android:id="@+id/stock_hawk"
+        android:layout_marginTop="15dp" />
 
-        <Button
-            style="@style/MenuButtons"
-            android:text="Build it Bigger"
-            android:id="@+id/build_it"
-            android:layout_marginTop="15dp" />
+    <Button
+        style="@style/MenuButtons"
+        android:text="@string/build_it_bigger"
+        android:id="@+id/build_it"
+        android:layout_marginTop="15dp" />
 
-        <Button
-            style="@style/MenuButtons"
-            android:text="Make Your App Material"
-            android:id="@+id/material"
-            android:layout_marginTop="15dp" />
+    <Button
+        style="@style/MenuButtons"
+        android:text="@string/make_your_app_material"
+        android:id="@+id/material"
+        android:layout_marginTop="15dp" />
 
-        <Button
-            style="@style/MenuButtons"
-            android:text="Go Ubiquitous"
-            android:id="@+id/ubiquitous"
-            android:layout_marginTop="15dp" />
+    <Button
+        style="@style/MenuButtons"
+        android:text="@string/go_ubiquitous"
+        android:id="@+id/ubiquitous"
+        android:layout_marginTop="15dp" />
 
-        <Button
-            style="@style/MenuButtons"
-            android:text="Capstone "
-            android:id="@+id/capstone"
-            android:layout_marginTop="15dp" />
+    <Button
+        style="@style/MenuButtons"
+        android:text="@string/capstone"
+        android:id="@+id/capstone"
+        android:layout_marginTop="15dp" />
 
 </LinearLayout>

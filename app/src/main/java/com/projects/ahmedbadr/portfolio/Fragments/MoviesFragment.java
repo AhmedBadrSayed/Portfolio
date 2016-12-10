@@ -1,7 +1,6 @@
 package com.projects.ahmedbadr.portfolio.Fragments;
 
 
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,11 +15,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RatingBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.projects.ahmedbadr.portfolio.Activities.MovieDetails;
 import com.projects.ahmedbadr.portfolio.Adapters.PostersRecyclerViewAdapter;
 import com.projects.ahmedbadr.portfolio.DataObjects.MovieObject;
 import com.projects.ahmedbadr.portfolio.DataStore.MoviesDB;
@@ -36,7 +32,6 @@ import com.yalantis.contextmenu.lib.interfaces.OnMenuItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringTokenizer;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -143,9 +138,9 @@ public class MoviesFragment extends Fragment implements OnMenuItemClickListener 
             @Override
             public void onItemClick(int position, View v) {
                 String Movie_Details = MoviesDetailsArray.get(position);
-                Intent intent = new Intent(getActivity(), MovieDetails.class);
-                intent.putExtra(Intent.EXTRA_TEXT, Movie_Details);
-                startActivity(intent);
+                moviesFragmentCallbacks moviesCallbacks
+                        = (moviesFragmentCallbacks) getActivity();
+                moviesCallbacks.posterClick(Movie_Details);
             }
         });
         if(lastChoice == "Favorites"){
@@ -230,21 +225,6 @@ public class MoviesFragment extends Fragment implements OnMenuItemClickListener 
     }
 
     private List<MenuObject> getMenuObjects() {
-        // You can use any [resource, bitmap, drawable, color] as image:
-        // item.setResource(...)
-        // item.setBitmap(...)
-        // item.setDrawable(...)
-        // item.setColor(...)
-        // You can set image ScaleType:
-        // item.setScaleType(ScaleType.FIT_XY)
-        // You can use any [resource, drawable, color] as background:
-        // item.setBgResource(...)
-        // item.setBgDrawable(...)
-        // item.setBgColor(...)
-        // You can use any [color] as text color:
-        // item.setTextColor(...)
-        // You can set any [color] as divider color:
-        // item.setDividerColor(...)
 
         List<MenuObject> menuObjects = new ArrayList<>();
 
@@ -298,6 +278,10 @@ public class MoviesFragment extends Fragment implements OnMenuItemClickListener 
                 lastChoice = "Favorites";
                 break;
         }
+    }
+
+    public interface moviesFragmentCallbacks{
+        public void posterClick(String movieDetails);
     }
 
 }

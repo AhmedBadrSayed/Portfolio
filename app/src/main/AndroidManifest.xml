@@ -23,8 +23,8 @@
             android:label="Movies"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".Activities.MovieDetails"
-            android:label="@string/title_activity_movie_details"
+            android:name=".Activities.Details"
+            android:label="@string/title_activity_details"
             android:parentActivityName=".Activities.Movies"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

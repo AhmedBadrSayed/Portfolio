@@ -39,4 +39,5 @@ dependencies {
     compile 'com.android.support:support-v4:24.2.1'
     compile 'com.yalantis:contextmenu:1.0.7'
     compile 'com.android.support:design:24.2.1'
+    compile 'com.yarolegovich:lovely-dialog:1.0.4'
 }
